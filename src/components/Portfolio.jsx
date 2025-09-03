@@ -5,7 +5,7 @@ const Portfolio = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/projects')
+    axios.get(`${import.meta.env.VITE_API_URL}/api/projects`)
       .then(response => {
         // এই console.log টি এখন আর দরকার নেই, চাইলে মুছে ফেলতে পারেন
         // console.log('API থেকে পাওয়া ডেটা:', response.data);
